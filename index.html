@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GoingTo Prototype</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400;8..144,500;8..144,600;8..144,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/app.css?v=4">
+</head>
+<body>
+<div class="stage">
+  <div class="phone" id="phone">
+    <div class="statusbar" id="statusbar">
+      <span class="sb-time">9:41</span>
+      <span class="sb-icons">
+        <svg width="18" height="11" viewBox="0 0 18 11"><rect x="0" y="7" width="3" height="4" rx="1"/><rect x="5" y="5" width="3" height="6" rx="1"/><rect x="10" y="2.5" width="3" height="8.5" rx="1"/><rect x="15" y="0" width="3" height="11" rx="1"/></svg>
+        <svg width="16" height="11" viewBox="0 0 16 11"><path d="M8 2.2c2.3 0 4.4.9 5.9 2.4l1.1-1.1A10 10 0 0 0 8 .6 10 10 0 0 0 1 3.5l1.1 1.1A8.4 8.4 0 0 1 8 2.2zm0 3.2c1.4 0 2.7.6 3.6 1.5l1.1-1.1A6.6 6.6 0 0 0 8 3.8c-1.8 0-3.5.7-4.7 2l1.1 1.1c.9-.9 2.2-1.5 3.6-1.5zM8 8.6c-.6 0-1.1.2-1.5.6L8 10.8l1.5-1.6c-.4-.4-.9-.6-1.5-.6z"/></svg>
+        <svg width="26" height="12" viewBox="0 0 26 12"><rect x=".5" y=".5" width="22" height="11" rx="3" fill="none" stroke="currentColor" opacity=".4"/><rect x="2" y="2" width="19" height="8" rx="2"/><rect x="23.5" y="4" width="1.5" height="4" rx=".7" opacity=".4"/></svg>
+      </span>
+    </div>
+    <main id="screen" class="screen"></main>
+    <nav class="tabbar" id="tabbar"></nav>
+    <div id="fab-root"></div>
+    <div id="overlay-root"></div>
+    <div class="toast" id="toast"></div>
+    <div class="home-ind"></div>
+  </div>
+  <aside class="proto-help">
+    <h1>GoingTo prototype</h1>
+    <p>Clickable prototype built from the <em>Going To – UI + Flows</em> Figma file. Your changes are saved in this browser. Long-press a chat bubble for Copy / Reply.</p>
+    <div class="jump">
+      <a href="#splash">Splash</a><a href="#onboarding">Onboarding</a><a href="#signin">Sign in</a><a href="#signup">Sign up</a><a href="#home">Home</a>
+      <a href="#events">Events</a><a href="#events?tab=ft">Free time</a><a href="#create-event">Create event</a><a href="#event/e11">Time finder</a>
+      <a href="#clubs">Clubs</a><a href="#club/c1">My club</a><a href="#create-club">Create club</a><a href="#ideas">Ideas</a><a href="#chats">Chats</a>
+      <a href="#friends">Friends</a><a href="#add-friend">Add friend</a><a href="#requests">Requests</a><a href="#tags">Tags</a><a href="#scan">Scan QR</a><a href="#account">Account</a><a href="#settings">Settings</a>
+    </div>
+    <button id="reset-data" class="link-btn">Reset demo data</button>
+  </aside>
+</div>
+<script src="js/icons.js?v=4"></script>
+<script src="js/data.js?v=4"></script>
+<script src="js/core.js?v=4"></script>
+<script src="js/screens-home.js?v=4"></script>
+<script src="js/screens-events.js?v=4"></script>
+<script src="js/screens-people.js?v=4"></script>
+<script src="js/screens-social.js?v=4"></script>
+<script>
+  document.getElementById('reset-data').onclick = function () { GT.reset(); location.hash = '#splash'; APP.render(); };
+  APP.render();
+</script>
+</body>
+</html>
